@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الشريحة 7 - SEO Presentation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="seo7.css">
+
+    
+</head>
+<body>
+    <!-- Background Decoration -->
+    <div class="bg-decoration">
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+
+    <!-- Slide Counter -->
+    <div class="slide-counter">7 / 16</div>
+
+    <!-- Main Container -->
+    <div class="slide-container">
+        <div class="slide-content">
+            <div class="header-section">
+                <h1 class="slide-title">وش يصير لو ما عندك SEO؟</h1>
+            </div>
+
+            <!-- Consequences List -->
+            <ul class="consequences-list">
+                <li class="consequence-item">
+                    <span class="warning-emoji color1"><i class="ph ph-users-three"></i></span>
+                    <span class="consequence-text">منافسينك ياخذون جميع العملاء الجدد</span>
+                </li>
+                <li class="consequence-item">
+                    <span class="warning-emoji color2"><i class="ph ph-eye-slash"></i></span>
+                    <span class="consequence-text">موقعك يبقى مخفي حتى لو كان ممتاز</span>
+                </li>
+                <li class="consequence-item">
+                    <span class="warning-emoji color3"><i class="ph ph-money-wavy"></i></span>
+                    <span class="consequence-text">تدفع إعلانات وأنت قادر تأتي مجاني</span>
+                </li>
+                <li class="consequence-item">
+                    <span class="warning-emoji color4"><i class="ph ph-trend-down"></i></span>
+                    <span class="consequence-text">تفقد فرص نمو يومية دون ما تشعر</span>
+                </li>
+                <li class="consequence-item">
+                    <span class="warning-emoji color5"><i class="ph ph-chart-line-up"></i></span>
+                    <span class="consequence-text">مشروعك يظل صغير بينما غيرك يكبر</span>
+                </li>
+            </ul>
+
+            <!-- Bottom Message -->
+            <div class="bottom-message">
+                <p class="message-text">
+                     كل يوم بدون SEO = فرص ضائعة لا تُعوض
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <div class="navigation">
+        <button class="nav-btn prev" onclick="location.href='../SEO6/seo6.html'">السابق</button>
+        <button class="nav-btn next" onclick="location.href='../SEO8/seo8.html'">التالي</button>
+    </div>
+
+    <script>
+        // Keyboard Navigation
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowRight') {
+                location.href = 'slide_8.html';
+            } else if (e.key === 'ArrowLeft') {
+                location.href = 'slide_6.html';
+            }
+        });
+
+        // Touch/Swipe Support
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        document.addEventListener('touchstart', e => {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+
+        document.addEventListener('touchend', e => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        });
+
+        function handleSwipe() {
+            if (touchEndX < touchStartX - 50) {
+                location.href = 'slide_8.html';
+            }
+            if (touchEndX > touchStartX + 50) {
+                location.href = 'slide_6.html';
+            }
+        }
+    </script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</body>
+</html>

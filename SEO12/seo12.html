@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الشريحة 12 - SEO Presentation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="seo12.css">
+</head>
+<body>
+    <!-- Background Decoration -->
+    <div class="bg-decoration">
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+
+    <!-- Slide Counter -->
+    <div class="slide-counter">12 / 16</div>
+
+    <!-- Main Container -->
+    <div class="slide-container">
+        <div class="slide-content">
+            <div class="header-section">
+                <h1 class="slide-title">كم يحتاج وقت؟</h1>
+            </div>
+
+            <!-- Timeline Container -->
+            <div class="timeline-container">
+                <!-- Timeline Line -->
+                <div class="timeline-line"></div>
+
+                <!-- Month 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <span class="timeline-icon color1"><i class="ph ph-alarm"></i></span>
+                            <div class="timeline-period">الشهر الأول</div>
+                        </div>
+                        <div class="timeline-description">
+                            التحليل والتخطيط وتجهيز الموقع
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3 Months -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <span class="timeline-icon color2"><i class="ph ph-plant"></i></span>
+                            <div class="timeline-period">3 شهور</div>
+                        </div>
+                        <div class="timeline-description">
+                            بداية ظهور النتائج الأولى
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6 Months -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <span class="timeline-icon color3"><i class="ph ph-chart-line-up"></i></span>
+                            <div class="timeline-period">6 شهور</div>
+                        </div>
+                        <div class="timeline-description">
+                            نتائج قوية وثابتة
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 12 Months -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <span class="timeline-icon color4"><i class="ph ph-rocket-launch"></i></span>
+                            <div class="timeline-period">12 شهر</div>
+                        </div>
+                        <div class="timeline-description">
+                            تصدر وقوة كاملة في المجال
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <div class="navigation">
+        <button class="nav-btn prev" onclick="location.href='../SEO11/seo11.html'">السابق</button>
+        <button class="nav-btn next" onclick="location.href='../SEO13/seo13.html'">التالي</button>
+    </div>
+
+    <script>
+        // Keyboard Navigation
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowRight') {
+                location.href = 'slide_13.html';
+            } else if (e.key === 'ArrowLeft') {
+                location.href = 'slide_11.html';
+            }
+        });
+
+        // Touch/Swipe Support
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        document.addEventListener('touchstart', e => {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+
+        document.addEventListener('touchend', e => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        });
+
+        function handleSwipe() {
+            if (touchEndX < touchStartX - 50) {
+                location.href = 'slide_13.html';
+            }
+            if (touchEndX > touchStartX + 50) {
+                location.href = 'slide_11.html';
+            }
+        }
+    </script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</body>
+</html>

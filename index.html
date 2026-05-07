@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الشريحة 1 - SEO Presentation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background: linear-gradient(135deg, #001B48 0%, #02457A 50%, #018ABE 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: auto;
+            position: relative;
+        }
+
+        /* Animated Background Elements */
+        .bg-decoration {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            opacity: 0.1;
+        }
+
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            animation: float 20s infinite ease-in-out;
+        }
+
+        .circle:nth-child(1) {
+            width: 300px;
+            height: 300px;
+            top: -150px;
+            right: -150px;
+            animation-delay: 0s;
+        }
+
+        .circle:nth-child(2) {
+            width: 200px;
+            height: 200px;
+            bottom: -100px;
+            left: -100px;
+            animation-delay: -5s;
+        }
+
+        .circle:nth-child(3) {
+            width: 150px;
+            height: 150px;
+            top: 50%;
+            left: 10%;
+            animation-delay: -10s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-30px) rotate(180deg); }
+        }
+
+        /* Main Container */
+        .slide-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 40px;
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+
+        /* Slide Content */
+        .slide-content {
+            background: rgba(255, 255, 255, 0.98);
+            border-radius: 24px;
+            padding: 80px 60px;
+            box-shadow: 0 25px 80px rgba(0, 0, 0, 0.3);
+            animation: slideUp 0.8s ease-out;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Question Icon */
+        .question-icon {
+            font-size: 72px;
+            margin-bottom: 30px;
+            animation: pulse 2s ease-in-out infinite;
+            display: inline-block;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+        }
+
+        /* Title */
+        .slide-title {
+            font-size: 3em;
+            font-weight: 800;
+            color: #001B48;
+            line-height: 1.4;
+            margin-bottom: 40px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .slide-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 5px;
+            background: linear-gradient(90deg, #018ABE, #97CADB);
+            border-radius: 3px;
+        }
+
+        /* Description */
+        .slide-description {
+            font-size: 1.4em;
+            color: #02457A;
+            line-height: 2;
+            max-width: 900px;
+            margin: 40px auto 0;
+            font-weight: 400;
+        }
+
+        .highlight {
+            color: #018ABE;
+            font-weight: 600;
+        }
+
+        /* Navigation */
+        .navigation {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 15px;
+            z-index: 100;
+        }
+
+        .nav-btn {
+            padding: 14px 32px;
+            border: none;
+            border-radius: 12px;
+            font-family: 'Cairo', sans-serif;
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .nav-btn.prev {
+            background-image: linear-gradient(to bottom right, #02457A , transparent  );
+            color: #001B48;
+        }
+
+        .nav-btn.next {
+            background-image: linear-gradient(to bottom left, #02457A , transparent  );
+            color: #001B48;
+        }
+
+        .nav-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .nav-btn:active {
+            transform: translateY(0);
+        }
+
+        /* Slide Counter */
+        .slide-counter {
+            position: fixed;
+            top: 30px;
+            left: 30px;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 12px 24px;
+            border-radius: 30px;
+            font-family: 'Cairo', sans-serif;
+            font-size: 0.95em;
+            font-weight: 600;
+            color: #001B48;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+            z-index: 100;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .slide-container {
+                padding: 40px 20px;
+            }
+
+            .slide-content {
+                padding: 50px 30px;
+            }
+
+            .slide-title {
+                font-size: 2em;
+            }
+
+            .slide-description {
+                font-size: 1.1em;
+            }
+
+            .question-icon {
+                font-size: 52px;
+            }
+
+            .navigation {
+                bottom: 20px;
+                gap: 10px;
+            }
+
+            .nav-btn {
+                padding: 12px 24px;
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Background Decoration -->
+    <div class="bg-decoration">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+
+    <!-- Slide Counter -->
+    <div class="slide-counter">1 / 16</div>
+
+    <!-- Main Container -->
+    <div class="slide-container">
+        <div class="slide-content">
+            
+            <h1 class="slide-title">
+                ليش بعض المشاريع تنجح في الإنترنت<br>والبعض يختفي؟
+            </h1>
+
+            <p class="slide-description">
+                هل تساءلت يومًا عن <span class="highlight">السبب الحقيقي</span> وراء نجاح بعض المشاريع 
+                وفشل البعض الآخر في العالم الرقمي؟<br><br>
+                
+                هل السر في المنتج؟ أم في التسويق؟<br>
+                أم في شيء آخر لم تفكر فيه بعد؟
+            </p>
+
+            <!-- Navigation -->
+    <div class="navigation">
+        <button class="nav-btn prev" onclick="location.href='#'">السابق</button>
+        <button class="nav-btn next" onclick="location.href='SEO2/seo2.html'">التالي</button>
+    </div>
+
+        </div>
+    </div>
+
+    
+
+    <script>
+        // Keyboard Navigation
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowLeft') {
+                location.href = 'slide_16.html';
+            } else if (e.key === 'ArrowRight') {
+                location.href = 'slide_2.html';
+            }
+        });
+
+        // Touch/Swipe Support
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        document.addEventListener('touchstart', e => {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+
+        document.addEventListener('touchend', e => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        });
+
+        function handleSwipe() {
+            if (touchEndX < touchStartX - 50) {
+                location.href = 'slide_2.html';
+            }
+            if (touchEndX > touchStartX + 50) {
+                location.href = 'slide_16.html';
+            }
+        }
+    </script>
+</body>
+</html>

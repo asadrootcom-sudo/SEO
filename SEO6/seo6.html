@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الشريحة 6 - SEO Presentation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
+    <link rel="stylesheet" href="seo6.css">
+</head>
+<body>
+    <!-- Background Decoration -->
+    <div class="bg-decoration">
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+
+    <!-- Slide Counter -->
+    <div class="slide-counter">6 / 16</div>
+
+    <!-- Main Container -->
+    <div class="slide-container">
+        <div class="slide-content">
+            <div class="header-section">
+                <h1 class="slide-title">الفرق بين الإعلان و SEO</h1>
+            </div>
+
+            <!-- Comparison Container -->
+            <div class="comparison-container">
+                <!-- Advertising Card -->
+                <div class="option-card advertising">
+                    <div class="card-header">
+                        <span class="card-icon-a"><i class="ph ph-megaphone"></i></span>
+                        <div class="card-title">الإعلان المدفوع</div>
+                    </div>
+                    <ul class="features-list">
+                        <li class="feature-item">
+                            <span class="feature-bullet">•</span>
+                            <span>تدفع → يظهر</span>
+                        </li>
+                        <li class="feature-item">
+                            <span class="feature-bullet">•</span>
+                            <span>تتوقف عن الدفع → يختفي</span>
+                        </li>
+                        <li class="feature-item">
+                            <span class="feature-bullet">•</span>
+                            <span>تكلفة يومية مستمرة</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- VS Badge -->
+                <div class="vs-badge">VS</div>
+
+                <!-- SEO Card -->
+                <div class="option-card seo">
+                    <div class="card-header">
+                        <span class="card-icon-b"><i class="ti ti-input-search"></i></span>
+                        <div class="card-title">SEO</div>
+                    </div>
+                    <ul class="features-list">
+                        <li class="feature-item">
+                            <span class="feature-bullet">•</span>
+                            <span>تبني → يستمر</span>
+                        </li>
+                        <li class="feature-item">
+                            <span class="feature-bullet">•</span>
+                            <span>تعمل مرة واحدة → تستمر سنوات</span>
+                        </li>
+                        <li class="feature-item">
+                            <span class="feature-bullet">•</span>
+                            <span>استثمار طويل الأجل</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <div class="navigation">
+        <button class="nav-btn prev" onclick="location.href='../SEO5/seo5.html'">السابق</button>
+        <button class="nav-btn next" onclick="location.href='../SEO7/seo7.html'">التالي</button>
+    </div>
+
+    <script>
+        // Keyboard Navigation
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowRight') {
+                location.href = 'slide_7.html';
+            } else if (e.key === 'ArrowLeft') {
+                location.href = 'slide_5.html';
+            }
+        });
+
+        // Touch/Swipe Support
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        document.addEventListener('touchstart', e => {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+
+        document.addEventListener('touchend', e => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        });
+
+        function handleSwipe() {
+            if (touchEndX < touchStartX - 50) {
+                location.href = 'slide_7.html';
+            }
+            if (touchEndX > touchStartX + 50) {
+                location.href = 'slide_5.html';
+            }
+        }
+    </script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الشريحة 3 - SEO Presentation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="seo3.css">
+</head>
+<body>
+    <!-- Background Decoration -->
+    <div class="bg-decoration">
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+
+    <!-- Slide Counter -->
+    <div class="slide-counter">3 / 16</div>
+
+    <!-- Main Container -->
+    <div class="slide-container">
+        <div class="slide-content">
+            <div class="header-section">
+                <h1 class="slide-title">هنا يجي دور SEO</h1>
+            </div>
+
+            <!-- SEO Definition -->
+            <div class="seo-definition">
+                <div class="seo-acronym">SEO</div>
+                <div class="seo-full-name">تحسين محركات البحث</div>
+            </div>
+
+            <!-- Simple Explanation -->
+            <div class="explanation-box">
+                <div class="explanation-label">ببساطة شديدة:</div>
+                <div class="explanation-text">
+                    الظهور في جوجل وقت ما العميل يبحث عن خدمتك أو منتجك
+                </div>
+            </div>
+
+            <!-- Features -->
+            <div class="features-list">
+                <div class="feature-item">
+                    <span class="feature-icon box"><i class="ph ph-megaphone"></i></span>
+                    <span>بدون إعلانات</span>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon box"><i class="ph ph-money-wavy"></i></span>
+                    <span>بدون دفع يومي</span>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon"><i class="ph ph-leaf"></i></span>
+                    <span>بشكل طبيعي</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <div class="navigation">
+        <button class="nav-btn prev" onclick="location.href='../SEO2/seo2.html'">السابق</button>
+        <button class="nav-btn next" onclick="location.href='../SEO4/seo4.html'">التالي</button>
+    </div>
+
+    <script>
+        // Keyboard Navigation
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowRight') {
+                location.href = 'slide_4.html';
+            } else if (e.key === 'ArrowLeft') {
+                location.href = 'slide_2.html';
+            }
+        });
+
+        // Touch/Swipe Support
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        document.addEventListener('touchstart', e => {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+
+        document.addEventListener('touchend', e => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        });
+
+        function handleSwipe() {
+            if (touchEndX < touchStartX - 50) {
+                location.href = 'slide_4.html';
+            }
+            if (touchEndX > touchStartX + 50) {
+                location.href = 'slide_2.html';
+            }
+        }
+    </script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</body>
+</html>

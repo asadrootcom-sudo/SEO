@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الشريحة 5 - SEO Presentation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="seo5.css">
+</head>
+<body>
+    <!-- Background Decoration -->
+    <div class="bg-decoration">
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+
+    <!-- Slide Counter -->
+    <div class="slide-counter">5 / 16</div>
+
+    <!-- Main Container -->
+    <div class="slide-container">
+        <div class="slide-content">
+            <div class="header-section">
+                <h1 class="slide-title">ليش SEO مهم لمشروعك؟</h1>
+            </div>
+
+            <!-- Benefits Grid -->
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-header">
+                        <span class="check-icon">✓</span>
+                        <div class="benefit-title">عملاء جاهزين للشراء</div>
+                    </div>
+                    <div class="benefit-description">
+                        هم اللي يبحثون عنك بالفعل - جاهزين لاتخاذ قرار الشراء
+                    </div>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-header">
+                        <span class="check-icon">✓</span>
+                        <div class="benefit-title">ثقة أعلى</div>
+                    </div>
+                    <div class="benefit-description">
+                        الناس تثق بنتائج جوجل الطبيعية أكثر من الإعلانات المدفوعة
+                    </div>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-header">
+                        <span class="check-icon">✓</span>
+                        <div class="benefit-title">نتائج طويلة المدى</div>
+                    </div>
+                    <div class="benefit-description">
+                        تستمر حتى لو ما دفعت بعد اليوم - استثمار يستمر سنوات
+                    </div>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-header">
+                        <span class="check-icon">✓</span>
+                        <div class="benefit-title">عائد استثمار مرتفع</div>
+                    </div>
+                    <div class="benefit-description">
+                        كل ريال تستثمره يتحول لأرباح حقيقية ومستدامة
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <div class="navigation">
+        <button class="nav-btn prev" onclick="location.href='../SEO4/seo4.html'">السابق</button>
+        <button class="nav-btn next" onclick="location.href='../SEO6/seo6.html'">التالي</button>
+    </div>
+
+    <script>
+        // Keyboard Navigation
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowRight') {
+                location.href = 'slide_6.html';
+            } else if (e.key === 'ArrowLeft') {
+                location.href = 'slide_4.html';
+            }
+        });
+
+        // Touch/Swipe Support
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        document.addEventListener('touchstart', e => {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+
+        document.addEventListener('touchend', e => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        });
+
+        function handleSwipe() {
+            if (touchEndX < touchStartX - 50) {
+                location.href = 'slide_6.html';
+            }
+            if (touchEndX > touchStartX + 50) {
+                location.href = 'slide_4.html';
+            }
+        }
+    </script>
+</body>
+</html>

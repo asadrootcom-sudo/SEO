@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الشريحة 11 - SEO Presentation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
+    <link rel="stylesheet" href="seo11.css">
+</head>
+<body>
+    <!-- Background Decoration -->
+    <div class="bg-decoration">
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+
+    <!-- Slide Counter -->
+    <div class="slide-counter">11 / 16</div>
+
+    <!-- Main Container -->
+    <div class="slide-container">
+        <div class="slide-content">
+            <div class="header-section">
+                <h1 class="slide-title">وش النتائج اللي تتوقعها؟</h1>
+            </div>
+
+            <!-- Results Grid -->
+            <div class="results-grid">
+                <div class="result-card">
+                    <span class="result-icon color3"><i class="ph ph-chart-line-up"></i></span>
+                    <div class="result-text">زيادة ملحوظة في عدد الزوار</div>
+                </div>
+
+                <div class="result-card">
+                    <span class="result-icon color2"><i class="ph ph-phone-call"></i></span>
+                    <div class="result-text">زيادة مكالمات ورسائل التواصل</div>
+                </div>
+
+                <div class="result-card">
+                    <span class="result-icon color1"><i class="ti ti-cash-banknote-plus"></i></span>
+                    <div class="result-text">زيادة حقيقية في المبيعات والأرباح</div>
+                </div>
+
+                <div class="result-card"> 
+                    <span class="result-icon color6"><i class="ti ti-target-arrow"></i></span>
+                    <div class="result-text">عملاء نوعية وجدّيون</div>
+                </div>
+
+                <div class="result-card">
+                    <span class="result-icon color5"><i class="ph ph-trophy"></i></span>
+                    <div class="result-text">مركز متقدم في جوجل</div>
+                </div>
+
+                <div class="result-card">
+                    <span class="result-icon color4"><i class="ti ti-device-mobile-up"></i></span>
+                    <div class="result-text">ظهور قوي على الجوال أيضاً</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <div class="navigation">
+        <button class="nav-btn prev" onclick="location.href='../SEO10/seo10.html'">السابق</button>
+        <button class="nav-btn next" onclick="location.href='../SEO12/seo12.html'">التالي</button>
+    </div>
+
+    <script>
+        // Keyboard Navigation
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowRight') {
+                location.href = 'slide_12.html';
+            } else if (e.key === 'ArrowLeft') {
+                location.href = 'slide_10.html';
+            }
+        });
+
+        // Touch/Swipe Support
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        document.addEventListener('touchstart', e => {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+
+        document.addEventListener('touchend', e => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        });
+
+        function handleSwipe() {
+            if (touchEndX < touchStartX - 50) {
+                location.href = 'slide_12.html';
+            }
+            if (touchEndX > touchStartX + 50) {
+                location.href = 'slide_10.html';
+            }
+        }
+    </script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</body>
+</html>

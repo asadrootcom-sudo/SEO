@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الشريحة 10 - SEO Presentation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="seo10.css">
+</head>
+<body>
+    <!-- Background Decoration -->
+    <div class="bg-decoration">
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+
+    <!-- Slide Counter -->
+    <div class="slide-counter">10 / 16</div>
+
+    <!-- Main Container -->
+    <div class="slide-container">
+        <div class="slide-content">
+            <div class="header-section">
+                <h1 class="slide-title">وش نسوي لك بالضبط؟</h1>
+            </div>
+
+            <!-- Services Grid -->
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-header">
+                        <span class="service-icon color1"><i class="ph ph-chart-bar"></i></span>
+                        <span class="service-text">نحلل سوقك ومنافسيك بالتفصيل</span>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-header">
+                        <span class="service-icon color2"><i class="ph ph-magnifying-glass"></i></span>
+                        <span class="service-text">نحدد الكلمات اللي يبحث عنها عملاؤك</span>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-header">
+                        <span class="service-icon color3"><i class="ph ph-wrench"></i></span>
+                        <span class="service-text">نحسن موقعك تقنياً ومحتوى</span>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-header">
+                        <span class="service-icon color4"><i class="ph ph-article"></i></span>
+                        <span class="service-text">نصنّع محتوى يخدم عملاؤك ويرضي جوجل</span>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-header">
+                        <span class="service-icon colo5"><i class="ph ph-link"></i></span>
+                        <span class="service-text">نبني سلطة موقعك (Backlinks)</span>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-header">
+                        <span class="service-icon color6"><i class="ph ph-trophy"></i></span>
+                        <span class="service-text">نخليك تتصدر النتائج الأولى</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <div class="navigation">
+        <button class="nav-btn prev" onclick="location.href='../SEO9/seo9.html'">السابق</button>
+        <button class="nav-btn next" onclick="location.href='../SEO11/seo11.html'">التالي</button>
+    </div>
+
+    <script>
+        // Keyboard Navigation
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowRight') {
+                location.href = 'slide_11.html';
+            } else if (e.key === 'ArrowLeft') {
+                location.href = 'slide_9.html';
+            }
+        });
+
+        // Touch/Swipe Support
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        document.addEventListener('touchstart', e => {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+
+        document.addEventListener('touchend', e => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        });
+
+        function handleSwipe() {
+            if (touchEndX < touchStartX - 50) {
+                location.href = 'slide_11.html';
+            }
+            if (touchEndX > touchStartX + 50) {
+                location.href = 'slide_9.html';
+            }
+        }
+    </script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</body>
+</html>
